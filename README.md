@@ -6,21 +6,21 @@ This directory contains a practice of OCR using Microsoft Azure Computer Vision 
 2. Python 2.7 - 3.6
 
 ## Run
-'''`
+```
 $ python ocr.py
-'''
+```
 
 ## Note
 The original file has an output as JSON format:
-'''
+```python
 print (json.dumps(parsed, sort_keys=True, indent=2))
-'''
+```
 To print out words, I made some changes:
-'''
+```python
 for line in parsed['regions'][0]['lines']:
         for word in line['words']:
             print(json.dumps(word['text'], sort_keys=True, indent=2))
-'''
+```
 
 ## Result
 
